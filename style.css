@@ -1,0 +1,154 @@
+html, body {
+	margin: 0;
+	padding: 10;
+}
+
+body {
+	font-family: arial, Helvetica, sans-serif;
+	background-color: lightgrey;
+	line-height: 1.65;
+	padding-bottom: 1000px; /*agar bisa discroll*/
+
+
+}
+
+/*Latihan 1*/
+.container-satu {
+	width: 800px;
+	margin: 50px auto;
+	background-color: white;
+	padding: 20px;
+	box-sizing: border-box;
+	display: flex;
+	
+	
+}
+
+.kolom-utama {
+	order: 2;
+	flex: 3;
+}
+.sidebar-satu {
+	order: 1;
+	flex: 1;
+}
+.sidebar-dua {
+	order: 3;
+	flex: 1;
+}
+
+/*Latihan 2*/
+.container-dua {
+	max-width: 800px;     /*#Agar responsive ketika dizooom in/out*/
+	margin: 50px auto;
+	
+}
+
+.layanan {
+	padding: 20px;
+	box-sizing: border-box;
+	margin-bottom: 20px; /*#Jarak jika posisi dibawah 600px*/
+}
+
+.layanan.satu {    /*jika titik diganti dgn space maka outputnya 'css tolong carikan layanan dan satu' */
+	background-color: lightblue;
+}
+
+.layanan.dua {
+	background-color: pink;
+}
+
+.layanan.tiga {
+	background-color: lightgreen;}
+
+/*Latihan 3 - Gallery*/
+.container-tiga {
+	max-width:800px;
+	margin: 50px auto;
+	display: flex;
+	flex-wrap: wrap;  /*#supaya turun*/
+	justify-content: center;
+}
+
+.thumbnail {
+	width: 50%;
+/**agar muat 4 gambar karena ukuran 100:4 = 25*/*/
+}
+
+.thumbnail img{
+	width: 100%; /*akan mengikuti thumnailnya*/
+}
+
+
+/*Latihan 4*/
+.container-empat{
+	max-width: 800px;
+	margin: 50px auto;
+	display: flex;
+}
+
+.card {
+	width: 50%;
+	border: 1px solid grey;
+	border-radius: 10px;/*#Agar ujung melengkung*/
+	background-color: white;
+	overflow: hidden; /*#Agar kotak dicontainer atas ngumpet*/
+	margin: 10px;
+	flex: 1;
+}
+.card.besar{
+	transform: scale(1.12);
+}
+
+.card .header{
+	background-color: grey;
+	height: 150px;
+}
+.card .content {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+/*Latihan 5*/
+.container-lima {
+	width: 500px;
+	height: 500px;
+	margin: 50px auto;
+	border: 5px solid black;
+	display: flex;
+}
+
+.kotak{
+	width: 100px;
+	height: 100px;
+	background-color: brown;
+	text-align: center;
+	color: white;
+	display: flex;
+	/*line-height: 100px; #Harus sama dgn height: agar ketengah*/
+	margin: auto;
+	/*transform: translateY(-50px); #Trik rumit tarik menarik*/
+}
+
+.kotak span{
+	margin: auto;
+}
+
+/*Responsive*/
+@media( min-width: 600px ){/* #Jika di HP maka layanannya akan kebawah, Jika ukuran mencaku 600px maka ia kesamping*/
+	.container-dua {
+		display: flex;
+	justify-content: space-between;
+	}
+
+	.layanan{
+	width: 30%;
+	}
+	.thumbnail {
+		width: 25%;
+	}
+	.card{
+		width:30%;
+	}
+	/*BERFUNGSI JIKA BUKA DI WEB*/
+}
